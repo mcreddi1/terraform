@@ -11,3 +11,11 @@ variable "common-tags" {
     terraform = "true"
   }
 }
+
+variable "zone_id" {
+  default = "Z0286835M1G9H01UW24U"
+}
+
+variable "domain_name" {
+  default = "devops81s.shop"
+}
