@@ -1,5 +1,5 @@
 output "public_ip" {
     value = aws_instance.terraform.public_ip
-    sensitive = 
+    sensitive = false
     description = "pub ip of instance created"
 }
