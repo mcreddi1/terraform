@@ -11,10 +11,10 @@ variable "instance_type" {
 
 variable "tags" {
  default = {
-  Name = backend
-  project = dev
-  component = dev
-  terraform = true
+  Name = "backend"
+  project = "dev"
+  component = "expense"
+  terraform = "true"
   }
 }
 
