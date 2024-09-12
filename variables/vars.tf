@@ -33,7 +33,7 @@ variable "to_port" {
 
 variable "protocol" {
   default = "tcp"
-  type = number
+  type = string
 }
 
 variable "cidr_blocks" {
