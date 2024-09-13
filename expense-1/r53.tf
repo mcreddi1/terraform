@@ -5,5 +5,5 @@ resource "aws_route53_record" "devops81s" {
   name = var.instance_names[count.index] == "frontend" ? var.domain_name : "${var.instance_names[count.index]}.${var.domain_name}"
   allow_overwrite = true
   ttl = 1
-  records = [aws_instance.terraform[count.index].private_ip]
+  records = var.instance_names[count.index] == "frontend" ? [aws_instance.terraform[count.index].public_ip] : [aws_instance.terraform[count.index].provate_ip]
   }
