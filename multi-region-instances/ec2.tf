@@ -24,6 +24,6 @@ resource "aws_instance" "example" {
 
 resource "aws_subnet" "us-east-1a" {
     count = length(var.instance_names)
-  vpc_id = length(var.instance_names[count.index])
+  vpc_id = "vpc-000db807882bf4fbd"
   cidr_block = "0.0.0.0/0"
 }
