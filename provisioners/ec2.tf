@@ -2,12 +2,7 @@ resource "aws_instance" "expense" {
     ami = "ami-09c813fb71547fc4f"
     instance_type = "t3.micro"
     vpc_security_group_ids = [aws_security_group.allow_ssh_terraform.id]
-    tags = merge(
-        var.common-tags,
-        {
-            Name = Provisionrer
-        }
-    )
+
     # local exec will execute commands we provided on local computer
     # remote exec will connect to the remote server and install the required packages
     provisioner "local-exec" {
@@ -16,8 +11,8 @@ resource "aws_instance" "expense" {
 
     connection {
         host = self.public_ip
-        user = "ec2-user"
-        password = "DevOps321"
+        #user = "ec2-user"
+        #password = "DevOps321"
         type = "ssh"
     }
 
